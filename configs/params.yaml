@@ -1,0 +1,14 @@
+infrastructure:
+  kafka_servers: "localhost:9092"
+  kafka_topic: "bank_transactions"
+  db_conn: "postgresql://fraud_user:fraud_password@127.0.0.1:5433/fraud_db"
+
+simulation:
+  transactions_per_second: 50
+  fraud_ratio: 0.0015
+
+data_ingestion:
+  retraining_window_days: 90
+  maturity_delay_days: 14  # Simulate waiting for labels to settle
+  output_dir: "data/raw"
+  output_filename: "train_snapshot.parquet"

@@ -1,0 +1,8 @@
+stages:
+  extract_training_data:
+    cmd: python src/data/extract_training_data.py
+    deps:
+      - src/data/extract_training_data.py
+      - configs/params.yaml
+    outs:
+      - data/raw/train_snapshot.parquet

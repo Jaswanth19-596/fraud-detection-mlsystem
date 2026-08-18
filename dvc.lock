@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  extract_training_data:
+    cmd: python src/data/extract_training_data.py
+    deps:
+    - path: configs/params.yaml
+      hash: md5
+      md5: fc2c9d9eb81141259cd4b0e00ca2061e
+      size: 408
+    - path: src/data/extract_training_data.py
+      hash: md5
+      md5: e610126a3860da10880197262cee1ee8
+      size: 2131
+    outs:
+    - path: data/raw/train_snapshot.parquet
+      hash: md5
+      md5: 664a8c983bcee6ab918c3240d8099428
+      size: 64502885

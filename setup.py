@@ -1,0 +1,23 @@
+from setuptools import find_packages, setup
+
+setup(
+    name="fraud_detection",
+    version="0.1.0",
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
+    install_requires=[
+        "dvc>=3.0.0",
+        "pandas>=2.0.0",
+        "pyarrow>=12.0.0",
+        "numpy>=1.24.0",
+        "pyyaml>=6.0.0",
+        "kafka-python>=2.0.2",
+        "psycopg2-binary>=2.9.0",
+        "SQLAlchemy>=2.0.0",
+        "torch>=2.9.0",
+        "mlflow>=2.12.0",
+        "imbalanced-learn>=0.14.0",
+        "matplotlib>=3.9.3",
+        "seaborn>=0.13.2",
+    ],
+)
